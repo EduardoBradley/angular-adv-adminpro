@@ -8,12 +8,8 @@ import { ChartConfiguration } from 'chart.js';
 })
 export class DonaComponent {
   @Input() title: string = 'Sin Titulo';
-  @Input() labels: string[] = [];
-  @Input() data: ChartConfiguration<'doughnut'>['data']['datasets'] = [];
-
-  public doughnutChartLabels: string[] = ['download', 'In store', 'Mail store'];
-
-  public doughnutChartData: ChartConfiguration<'doughnut'>['data']['datasets'] = [
+  @Input('labels') doughnutChartLabels: string[] = ['download', 'In store', 'Mail store'];
+  @Input('data') doughnutChartData: ChartConfiguration<'doughnut'>['data']['datasets'] = [
     { data: [ 350, 450, 100 ] }
   ];
 
